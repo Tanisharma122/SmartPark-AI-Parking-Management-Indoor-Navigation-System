@@ -1,0 +1,53 @@
+[
+    {
+        "location": "Ganesh Glory",
+        "slot_id": "B1",
+        "duration_hours": 2,
+        "amount": 200,
+        "coupon": "CPARK3726",
+        "timestamp": "2026-01-21 16:30:00.762110",
+        "status": "confirmed"
+    },
+    {
+        "location": "Ganesh Glory",
+        "slot_id": "B1",
+        "duration_hours": 2,
+        "amount": 200,
+        "coupon": "CPARK5562",
+        "timestamp": "2026-01-21 16:39:46.827374",
+        "status": "confirmed"
+    },
+    {
+        "location": "Ganesh Glory",
+        "slot_id": "S1",
+        "entry_time": "17:00:34.931214",
+        "exit_time": "19:00:34.931214",
+        "duration_hours": 2.0,
+        "amount": 200,
+        "coupon": "CPARK2719",
+        "timestamp": "2026-01-21 16:50:34.937420",
+        "status": "confirmed"
+    },
+    {
+        "location": "Ganesh Glory",
+        "slot_id": "S1",
+        "entry_time": "17:15:00",
+        "exit_time": "19:15:00",
+        "duration_hours": 2.0,
+        "amount": 200,
+        "coupon": "CPARK9988",
+        "timestamp": "2026-01-21 17:01:20.204838",
+        "status": "confirmed"
+    },
+    {
+        "location": "Ganesh Glory",
+        "slot_id": "S1",
+        "entry_time": "17:15:00",
+        "exit_time": "19:15:00",
+        "duration_hours": 2.0,
+        "amount": 200,
+        "coupon": "CPARK7586",
+        "timestamp": "2026-01-21 17:02:20.738817",
+        "status": "confirmed"
+    }
+]

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Parking Slots Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .status-free { color: green; font-weight: bold; }
+        .status-occupied { color: red; font-weight: bold; }
+        #result-image { max-width: 100%; border: 1px solid #ccc; }
+    </style>
+</head>
+<body class="p-4">
+<div class="container">
+    <h2 class="mb-4">Parking Slots Dashboard</h2>
+
+    <!-- Upload form -->
+    <form id="upload-form" class="mb-4">
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload parking lot image</label>
+            <input class="form-control" type="file" id="image" name="image" accept="image/*" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Analyze</button>
+        <span id="status-text" class="ms-3"></span>
+    </form>
+
+    <!-- Counters -->
+    <div class="row mb-4" id="counters" style="display:none;">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Total Slots</h5>
+                    <h3 id="total-slots">0</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Free Slots</h5>
+                    <h3 id="free-slots" class="text-success">0</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>Occupied Slots</h5>
+                    <h3 id="occupied-slots" class="text-danger">0</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image + table -->
+    <div class="row">
+        <div class="col-md-7 mb-3">
+            <img id="result-image" src="" alt="Annotated parking" style="display:none;">
+        </div>
+        <div class="col-md-5">
+            <h5>Slots Details</h5>
+            <table class="table table-sm" id="slots-table" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>Slot ID</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="slots-body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('upload-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const statusText = document.getElementById('status-text');
+    statusText.textContent = 'Analyzing...';
+
+    const fileInput = document.getElementById('image');
+    const formData = new FormData();
+    formData.append('image', fileInput.files[0]);
+
+    fetch('/analyze-image', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.error) {
+            statusText.textContent = 'Error: ' + data.error;
+            return;
+        }
+        statusText.textContent = 'Done';
+
+        // Update counters
+        document.getElementById('counters').style.display = 'flex';
+        document.getElementById('total-slots').textContent = data.total_slots;
+        document.getElementById('free-slots').textContent = data.free_slots;
+        document.getElementById('occupied-slots').textContent = data.occupied_slots;
+
+        // Update image
+        const img = document.getElementById('result-image');
+        img.src = data.image_url + '?t=' + new Date().getTime(); // cache bust
+        img.style.display = 'block';
+
+        // Update table
+        const tbody = document.getElementById('slots-body');
+        tbody.innerHTML = '';
+        data.slots.forEach(slot => {
+            const tr = document.createElement('tr');
+            const tdId = document.createElement('td');
+            const tdStatus = document.createElement('td');
+
+            tdId.textContent = slot.id;
+            tdStatus.textContent = slot.status;
+            tdStatus.className = slot.status === 'free' ? 'status-free' : 'status-occupied';
+
+            tr.appendChild(tdId);
+            tr.appendChild(tdStatus);
+            tbody.appendChild(tr);
+        });
+        document.getElementById('slots-table').style.display = 'table';
+    })
+    .catch(err => {
+        console.error(err);
+        statusText.textContent = 'Unexpected error';
+    });
+});
+</script>
+</body>
+</html>

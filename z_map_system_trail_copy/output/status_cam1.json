@@ -1,0 +1,62 @@
+[
+  {
+    "id": "S1",
+    "status": "free"
+  },
+  {
+    "id": "S2",
+    "status": "free"
+  },
+  {
+    "id": "S3",
+    "status": "occupied"
+  },
+  {
+    "id": "S4",
+    "status": "occupied"
+  },
+  {
+    "id": "S5",
+    "status": "free"
+  },
+  {
+    "id": "S6",
+    "status": "occupied"
+  },
+  {
+    "id": "S7",
+    "status": "free"
+  },
+  {
+    "id": "S8",
+    "status": "occupied"
+  },
+  {
+    "id": "S9",
+    "status": "occupied"
+  },
+  {
+    "id": "S10",
+    "status": "occupied"
+  },
+  {
+    "id": "S11",
+    "status": "occupied"
+  },
+  {
+    "id": "S12",
+    "status": "occupied"
+  },
+  {
+    "id": "S13",
+    "status": "free"
+  },
+  {
+    "id": "S14",
+    "status": "free"
+  },
+  {
+    "id": "S15",
+    "status": "free"
+  }
+]

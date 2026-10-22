@@ -1,0 +1,11 @@
+streamlit
+sqlalchemy
+ultralytics
+razorpay
+opencv-python-headless
+pandas
+qrcode
+pillow
+numpy
+matplotlib
+geopy

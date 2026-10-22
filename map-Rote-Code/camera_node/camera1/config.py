@@ -1,0 +1,25 @@
+# VIDEO_PATH = "arial2.mp4"
+# SLOTS_JSON = "arial11.json"
+# MODEL_PATH = "best.pt"
+
+# FRAME_WIDTH = 1080
+# FRAME_HEIGHT = 600
+
+# CONF_THRES = 0.25
+# IOU_THRES = 0.7
+
+BACKEND_URL = "http://127.0.0.1:8000"
+DEVICE_API_KEY = "sk_dev_vid1_456"
+VIDEO_ID = "VID_1"
+
+MODEL_PATH = "best.pt"
+SLOTS_JSON = "arial11.json"
+
+FRAME_WIDTH = 1080
+FRAME_HEIGHT = 600
+
+CONF_THRES = 0.25
+IOU_THRES = 0.7
+
+SEND_INTERVAL = 0.5
+FRAME_SKIP = 3

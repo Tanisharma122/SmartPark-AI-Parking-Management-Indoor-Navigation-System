@@ -1,0 +1,124 @@
+{
+  "palladium": {
+    "name": "Palladium Mall",
+    "video_source": "data/arial2.mp4",
+    "json_source": "data/arial2.json",
+    "wings": {
+      "A Wing": {
+        "slots": [],
+        "coords": []
+      },
+      "B Wing": {
+        "slots": [],
+        "coords": []
+      },
+      "C Wing": {
+        "slots": [],
+        "coords": []
+      },
+      "D Wing": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "alpha": {
+    "name": "Alpha Mall",
+    "video_source": "data/video.mp4",
+    "json_source": "data/video.json",
+    "wings": {
+      "General": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "swagat": {
+    "name": "Swagat Mall",
+    "video_source": "data/arial2.mp4",
+    "json_source": "data/arial2.json",
+    "wings": {
+      "General": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "riverfront": {
+    "name": "Sabarmati Riverfront",
+    "video_source": "data/vid4.mp4",
+    "json_source": "data/vid4.json",
+    "wings": {
+      "North": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "gmdc": {
+    "name": "GMDC Ground",
+    "video_source": "data/vid4.mp4",
+    "json_source": "data/vid4.json",
+    "wings": {
+      "Ground": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "udgam": {
+    "name": "Udgam School Garba Plot",
+    "video_source": "data/vid4.mp4",
+    "json_source": "data/vid4.json",
+    "wings": {
+      "A": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "law_garden": {
+    "name": "Law Garden Plot",
+    "video_source": "data/vid4.mp4",
+    "json_source": "data/vid4.json",
+    "wings": {
+      "A": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "nikol": {
+    "name": "Nikol Garba Ground",
+    "video_source": "data/vid4.mp4",
+    "json_source": "data/vid4.json",
+    "wings": {
+      "A": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "manekbagh": {
+    "name": "Manekbagh Plot",
+    "video_source": "data/vid4.mp4",
+    "json_source": "data/vid4.json",
+    "wings": {
+      "A": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  },
+  "sg_highway": {
+    "name": "SG Highway Plot",
+    "video_source": "data/video.mp4",
+    "json_source": "data/video.json",
+    "wings": {
+      "A": {
+        "slots": [],
+        "coords": []
+      }
+    }
+  }
+}
